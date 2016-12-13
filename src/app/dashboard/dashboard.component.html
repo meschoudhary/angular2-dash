@@ -1,0 +1,15 @@
+<div [ngSwitch]="selectedMenuItem?.lectures">
+  <div class="container" *ngSwitchCase="0">
+  	<h4>No examples provided for this section</h4>
+  </div>
+  <div *ngSwitchDefault class="row">
+	  <div class="col-md-5">
+	    <!-- <rb-recipe-list (recipeSelected)="selectedRecipe = $event"></rb-recipe-list> -->
+	    <app-dash-list [list]="selectedMenuItem?.lectures"></app-dash-list>
+	  </div>
+	  <div class="col-md-7">
+	    <!-- <rb-recipe-detail [selectedRecipe]="selectedRecipe"></rb-recipe-detail> -->
+	    load the appropriate component for lecture selected
+	  </div>
+  </div>
+</div>

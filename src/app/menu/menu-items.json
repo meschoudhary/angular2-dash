@@ -1,0 +1,35 @@
+{
+    "menu": [
+        {
+            "name": "Components",
+            "lectures": [
+                {"name": "lec1"},
+                {"name": "lec2"},
+                {"name": "lec3"}
+            ]
+        },
+        {
+            "name": "Modules",
+            "lectures": [
+                {"name": "lec1"},
+                {"name": "lec2"},
+                {"name": "lec3"}
+            ]
+        },
+        {
+            "name": "Directives"
+        },
+        {
+            "name": "Routes"
+        },
+        {
+            "name": "Pipes"
+        },
+        {
+            "name": "Http"
+        },
+        {
+            "name": "Animations"
+        }
+    ]
+}

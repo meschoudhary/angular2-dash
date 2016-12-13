@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="col-xs-8">
+    <ul class="list-group">
+	    <a class="list-group-item clearfix" *ngFor="let lecture of list" (click)="onSelected(lecture)"
+	    		[ngClass]="{active: isSelectedLecture(lecture)}">
+		  <div class="pull-left">
+		    <h5 class="list-group-item-heading">{{lecture}}</h5>
+		  </div>
+		</a>
+    </ul>
+  </div>
+</div>
