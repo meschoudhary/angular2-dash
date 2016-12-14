@@ -9,6 +9,7 @@ import { MenuService } from './menu/menu.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home.component';
 import { DashListComponent } from './dashboard/dash-list/dash-list.component';
+import { DashDetailComponent } from './dashboard/dash-detail/dash-detail.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { DashListComponent } from './dashboard/dash-list/dash-list.component';
     MenuComponent,
     DashboardComponent,
     HomeComponent,
-    DashListComponent
+    DashListComponent,
+    DashDetailComponent
   ],
   imports: [
     BrowserModule,

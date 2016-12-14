@@ -20,8 +20,4 @@ export class DashListComponent implements OnInit {
       this.selectedLecture = lecture;
   }
 
-  isSelectedLecture(lecture: string){
-      return this.selectedLecture === lecture;
-  }
-
 }
