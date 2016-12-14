@@ -1,16 +1,23 @@
 import { Injectable, EventEmitter } from '@angular/core';
-import { MenuItem } from './menu-item';
+import { MenuItem } from './menu/menu-item';
+import { LectureItem } from './dashboard/dash-list/lecture-item';
 import { Http, Response } from '@angular/http';
+import { NAV_ITEMS } from './nav-items';
 import 'rxjs/Rx';
 
 @Injectable()
-export class MenuService {
-
+export class NavService {
+  
   menuItems: MenuItem[] = [];
   activeMenuItem: MenuItem;
+  activeLectureItem: LectureItem;
   activeMenuEmitter = new EventEmitter<MenuItem>();
+  activeLectureEmitter = new EventEmitter<LectureItem>();
 
-  constructor(private http: Http) {}
+  constructor(private http: Http) {
+    this.populateMenu(NAV_ITEMS);
+    console.log(this.menuItems);
+  }
 
   getMenu(){
       return this.menuItems;
@@ -21,29 +28,20 @@ export class MenuService {
       this.activeMenuItem = menuItem;
   }
 
-  //used in AppModule
-  buildMenu(){
-    return new Promise((resolve, reject) => {
-        this.http.get('app/menu/menu-items.json')
-            .map((res: Response) => res.json())
-            .subscribe((val) => {
-                console.log(val);
-                let items = val.menu;
-                this.populateMenu(items);
-                console.log(this.menuItems);
-                resolve(true);
-        });
-    });
+  setActiveLectureItem(lectureItem: LectureItem){
+      this.activeLectureEmitter.emit(lectureItem);
+      this.activeLectureItem = lectureItem;
   }
 
   populateMenu(items){
       for (var i = 0; i < items.length; i++) {
         let currentItem = items[i];  
         let name: string = currentItem.name;
-        let lectures: string[] = [];
+        let lectures: LectureItem[] = [];
         if(currentItem.lectures){
             for (var j = 0; j < currentItem.lectures.length; j++) {
-                lectures.push(currentItem.lectures[j].name);
+                let lectureItem = currentItem.lectures[j];
+                lectures.push(new LectureItem(lectureItem.title, lectureItem.component));
             }
         }
         this.menuItems.push(new MenuItem(name, lectures));

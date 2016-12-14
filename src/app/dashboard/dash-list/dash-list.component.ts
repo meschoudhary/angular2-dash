@@ -1,5 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 
+import { NavService } from '../../nav.service';
+import { LectureItem } from './lecture-item';
+
 @Component({
   selector: 'app-dash-list',
   templateUrl: './dash-list.component.html',
@@ -8,16 +11,16 @@ import { Component, OnInit, Input } from '@angular/core';
 export class DashListComponent implements OnInit {
 
   @Input() list: string[];
-  selectedLecture: string;
+  selectedLecture: LectureItem;
 
-  constructor() { }
+  constructor(private navService: NavService) { }
 
   ngOnInit() {
 
   }
 
-  onSelected(lecture: string){
-      this.selectedLecture = lecture;
+  onSelected(lecture: LectureItem){
+      this.navService.setActiveLectureItem(lecture);
   }
 
 }

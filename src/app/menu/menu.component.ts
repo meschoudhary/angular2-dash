@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuItem } from './menu-item'; 
-import { MenuService } from './menu.service';
+import { NavService } from '../nav.service';
 
 @Component({
   selector: 'app-menu',
@@ -10,15 +10,15 @@ export class MenuComponent implements OnInit {
 
   menuItems: MenuItem[];
     
-  constructor(private menuService: MenuService) { }
+  constructor(private navService: NavService) { }
 
   ngOnInit() {
-    this.menuItems = this.menuService.getMenu();
+    this.menuItems = this.navService.getMenu();
   }
 
   onMenuClick(menuItem: MenuItem){
       // console.log(menuItem);
-      this.menuService.setActiveMenuItem(menuItem);
+      this.navService.setActiveMenuItem(menuItem);
   }
 
 }
