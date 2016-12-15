@@ -10,8 +10,7 @@ import { LectureItem } from './lecture-item';
 })
 export class DashListComponent implements OnInit {
 
-  @Input() list: string[];
-  selectedLecture: LectureItem;
+  @Input() list: LectureItem[];
 
   constructor(private navService: NavService) { }
 

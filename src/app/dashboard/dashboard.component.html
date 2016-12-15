@@ -1,13 +1,8 @@
-<div [ngSwitch]="selectedMenuItem?.lectures">
-  <div class="container" *ngSwitchCase="0">
-  	<h4>No examples provided for this section</h4>
+<div class="row">
+  <div class="col-md-3">
+	  <app-dash-list [list]="selectedMenuItem?.lectures"></app-dash-list>
   </div>
-  <div *ngSwitchDefault class="row">
-	  <div class="col-md-5">
-	    <app-dash-list [list]="selectedMenuItem?.lectures"></app-dash-list>
-	  </div>
-	  <div class="col-md-7">
-	    <router-outlet></router-outlet>
-	  </div>
+  <div class="col-md-9">
+	<router-outlet></router-outlet>
   </div>
 </div>

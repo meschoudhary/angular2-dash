@@ -1,6 +1,6 @@
 <div class="row">
-  <div class="col-xs-8">
-    <ul class="list-group">
+  <div class="col-xs-12">
+  	<ul class="list-group" *ngIf="list?.length > 0">
 	    <a class="list-group-item clearfix" *ngFor="let lecture of list" (click)="onSelected(lecture)"
 	    		[routerLink]="[lecture.title]" routerLinkActive="active">
 		  <div class="pull-left">
@@ -8,5 +8,14 @@
 		  </div>
 		</a>
     </ul>
+    <div *ngIf="list?.length === 0">
+	  	<h5>No lectures provided for this section</h5>
+	  	<hr>
+	</div>
   </div>
 </div>
+<!-- {{list}}
+<span [ngSwitch]="list?.length">
+	<p *ngSwitchCase ="list?.length > 0">Non-Zero</p>
+	<p *ngSwitchDefault>Zero</p>
+</span> -->

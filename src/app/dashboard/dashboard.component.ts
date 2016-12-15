@@ -23,6 +23,7 @@ export class DashboardComponent implements OnInit {
           this.navService.activeMenuEmitter.subscribe(
             (item: MenuItem) => {
                 this.selectedMenuItem = item;
+                console.log(item);
             }
           );
       }
