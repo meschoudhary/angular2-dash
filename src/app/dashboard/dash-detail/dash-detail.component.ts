@@ -13,10 +13,13 @@ export class DashDetailComponent implements OnInit {
 	
 	@ViewChild('container', {read: ViewContainerRef}) container: ViewContainerRef;
 	private lecture: LectureItem;
-
+	private mod: any;
+		    
 	constructor(private navService: NavService, private compiler: Compiler) { }
 
 	ngOnInit() {
+		//initialize module that holds components
+		this.mod = this.compiler.compileModuleAndAllComponentsSync(NavModule);
 
 		this.lecture = this.navService.activeLectureItem;
 		if(this.lecture){
@@ -36,8 +39,7 @@ export class DashDetailComponent implements OnInit {
 
 	loadComponent(targetComponent: Type<any>){
 		if(typeof this.container !== 'undefined' && typeof targetComponent !== 'undefined'){
-			const mod = this.compiler.compileModuleAndAllComponentsSync(NavModule);
-		    const factory = mod.componentFactories.find((comp) =>
+			let factory = this.mod.componentFactories.find((comp) =>
 		      comp.componentType === targetComponent
 		    );
 		    this.container.clear();

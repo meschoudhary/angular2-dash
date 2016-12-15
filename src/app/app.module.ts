@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { routing } from './app.routing';
 
+import { NavModule } from './nav.module';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { NavService } from './nav.service';
@@ -23,6 +24,7 @@ import { DashDetailComponent } from './dashboard/dash-detail/dash-detail.compone
   imports: [
     BrowserModule,
     HttpModule,
+    NavModule,
     routing
   ],
   providers: [
