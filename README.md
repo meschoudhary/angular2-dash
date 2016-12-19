@@ -41,8 +41,6 @@ Angular2 Dashboard - Learning By Example
 - Forms
  - Template-Driven Approach
  - Data-Driven Approach
- 
- - incomplete structure
 
 ## Installation
 
