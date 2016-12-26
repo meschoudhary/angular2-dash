@@ -10,8 +10,17 @@
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav">
-	        <li *ngFor="let item of menuItems" routerLinkActive="active">
-	        	<a [routerLink]="['dash/'+item.name]" (click)="onMenuClick(item)">{{item.name}}</a>
+
+	        <li *ngFor="let item of menuItems" routerLinkActive="active" [ngClass]="{dropdown : item.children.length > 0}" dashDropdown>
+	        	<a [routerLink]="['dash/'+item.name]" (click)="onMenuClick(item)">
+	        		{{item.name}}
+	        		<span *ngIf="item.children.length > 0" class="caret"></span>
+	        	</a>
+	        	<ul *ngIf="item.children.length > 0" class="dropdown-menu">
+		            <li *ngFor="let child of item.children" routerLinkActive="active">
+		            	<a [routerLink]="['dash/'+item.name+'-'+child.name]" (click)="onMenuClick(child)">{{child.name}}</a>
+	            	</li>
+	          	</ul>
         	</li>
 	      </ul>
 	    </div><!-- /.navbar-collapse -->

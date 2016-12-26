@@ -40,20 +40,20 @@ Angular2 Dashboard - Learning By Example
  - Route Guards (CanActivate & CanDeactivate)
 - Forms
  - Template-Driven Approach 
- - Form Properties (Template-Driven)
- - Input Validation (Template-Driven)
- - Submitting Forms (Template-Driven)
- - Setting a Default Value (Template-Driven)
- - Form Groups (Template-Driven)
- - Property Validation (Template-Driven)
+  - Form Properties
+  - Input Validation
+  - Submitting Forms
+  - Setting a Default Value
+  - Form Groups
+  - Property Validation
  - Data-Driven Approach
- - Input Validation (Data-Driven)
- - Submitting Forms Data-Driven
- - Form Groups (Data-Driven)
- - Form Arrays (Data-Driven)
- - Custom Validators (Data-Driven)
- - Custom Async Validators (Data-Driven)
- - Form Reset
+  - Input Validation
+  - Submitting Forms
+  - Form Groups
+  - Form Arrays
+  - Custom Validators
+  - Custom Async Validators
+  - Form Reset
 - Pipes
 - Http
 - Animation

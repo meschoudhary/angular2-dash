@@ -3,14 +3,15 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { routing } from './app.routing';
 
-import { NavModule } from './nav.module';
+import { NavModule } from './menu/nav.module';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
-import { NavService } from './nav.service';
+import { NavService } from './menu/nav.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home.component';
 import { DashListComponent } from './dashboard/dash-list/dash-list.component';
 import { DashDetailComponent } from './dashboard/dash-detail/dash-detail.component';
+import { DropdownDirective } from './dropdown.directive';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { DashDetailComponent } from './dashboard/dash-detail/dash-detail.compone
     DashboardComponent,
     HomeComponent,
     DashListComponent,
-    DashDetailComponent
+    DashDetailComponent,
+    DropdownDirective
   ],
   imports: [
     BrowserModule,

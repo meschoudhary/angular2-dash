@@ -1,9 +1,9 @@
 import { Component, OnInit, Input, Type, ViewChild, ViewContainerRef, Compiler } 
 	from '@angular/core';
 
-import { NavService } from '../../nav.service';
+import { NavService } from '../../menu/nav.service';
 import { LectureItem } from '../dash-list/lecture-item';
-import { NavModule } from '../../nav.module';
+import { NavModule } from '../../menu/nav.module';
 
 @Component({
   selector: 'app-dash-detail',
@@ -37,7 +37,7 @@ export class DashDetailComponent implements OnInit {
 			);
 	}
 
-	loadComponent(targetComponent: Type<any>){
+	private loadComponent(targetComponent: Type<any>){
 		if(typeof this.container !== 'undefined' && typeof targetComponent !== 'undefined'){
 			let factory = this.mod.componentFactories.find((comp) =>
 		      comp.componentType === targetComponent

@@ -3,6 +3,12 @@
 	  <app-dash-list [list]="selectedMenuItem?.lectures"></app-dash-list>
   </div>
   <div class="col-md-9">
-	<router-outlet></router-outlet>
+  	<router-outlet></router-outlet>
+	<div *ngIf="selectedMenuItem?.children.length > 0">
+		<h3>Child Pages</h3>
+		<h5 *ngFor="let child of selectedMenuItem.children">
+	    	<a [routerLink]="['/dash/'+selectedMenuItem.name+'-'+child.name]" (click)="onChildClick(child)">{{child.name}}</a>
+		</h5>
+	</div>
   </div>
 </div>

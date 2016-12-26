@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavService } from '../nav.service';
+import { NavService } from '../menu/nav.service';
 import { MenuItem } from '../menu/menu-item';
 import { Router } from "@angular/router";
 
@@ -27,6 +27,10 @@ export class DashboardComponent implements OnInit {
             }
           );
       }
+  }
+
+  onChildClick(childItem: MenuItem){
+    this.navService.setActiveMenuItem(childItem);
   }
 
 }

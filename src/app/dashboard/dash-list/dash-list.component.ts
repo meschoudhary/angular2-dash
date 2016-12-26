@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { NavService } from '../../nav.service';
+import { NavService } from '../../menu/nav.service';
 import { LectureItem } from './lecture-item';
 
 @Component({
