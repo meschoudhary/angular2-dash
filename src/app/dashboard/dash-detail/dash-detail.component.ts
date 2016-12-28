@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Type, ViewChild, ViewContainerRef, Compiler } 
+import { Component, OnInit, OnDestroy, Input, Type, ViewChild, ViewContainerRef, Compiler } 
 	from '@angular/core';
 
 import { NavService } from '../../menu/nav.service';
@@ -9,11 +9,12 @@ import { NavModule } from '../../menu/nav.module';
   selector: 'app-dash-detail',
   templateUrl: './dash-detail.component.html'
 })
-export class DashDetailComponent implements OnInit {
+export class DashDetailComponent implements OnInit, OnDestroy {
 	
 	@ViewChild('container', {read: ViewContainerRef}) container: ViewContainerRef;
 	private lecture: LectureItem;
 	private mod: any;
+	private subscription: any;
 		    
 	constructor(private navService: NavService, private compiler: Compiler) { }
 
@@ -26,7 +27,7 @@ export class DashDetailComponent implements OnInit {
 			this.loadComponent(this.lecture.component);
 		}
 
-		this.navService.activeLectureEmitter.subscribe(
+		this.subscription = this.navService.activeLectureEmitter.subscribe(
 				(lecture: LectureItem) => {
 					if(lecture && lecture !== this.lecture){
 						this.lecture = lecture;
@@ -46,5 +47,11 @@ export class DashDetailComponent implements OnInit {
 		    this.container.createComponent(factory);
 		}
 	}
+
+	ngOnDestroy(){
+		this.subscription.unsubscribe();
+	}
+
+
 
 }
