@@ -40,20 +40,21 @@ Angular2 Dashboard - Learning By Example
  - Route Guards (CanActivate & CanDeactivate)
 - Forms
  - Template-Driven Approach 
-  - Form Properties
-  - Input Validation
-  - Submitting Forms
-  - Setting a Default Value
-  - Form Groups
-  - Property Validation
+    - Form Properties
+    - Input Validation
+    - Submitting Forms
+    - Setting a Default Value
+    - Form Groups
+    - Property Validation
+    - Form Reset
  - Data-Driven Approach
-  - Input Validation
-  - Submitting Forms
-  - Form Groups
-  - Form Arrays
-  - Custom Validators
-  - Custom Async Validators
-  - Form Reset
+    - Input Validation
+    - Submitting Forms
+    - Form Groups
+    - Form Arrays
+    - Custom Validators
+    - Custom Async Validators
+    - Form Reset
 - Pipes
  - Basic (built-in) Pipes
  - Pipe Arguments
