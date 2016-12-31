@@ -55,7 +55,20 @@ Angular2 Dashboard - Learning By Example
   - Custom Async Validators
   - Form Reset
 - Pipes
+ - Basic (built-in) Pipes
+ - Pipe Arguments
+ - Chaining Pipes
+ - Custom Pipes
+ - Pure Pipes vs Impure Pipes
+ - Async Pipes
 - Http
+ - FireBase Setup
+ - CRUD Examples
+  - GET Request
+  - POST Request
+  - PATCH Request
+  - DELETE Request
+  - Error Handling
 - Animation
 
 ## Installation
