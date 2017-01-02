@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ComponentsModule } from '../modules/components/components.module';
+import { ComponentsModule } from '../modules';
 
 @NgModule({
   imports: [
