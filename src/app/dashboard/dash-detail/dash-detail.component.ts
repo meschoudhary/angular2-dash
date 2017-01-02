@@ -12,6 +12,7 @@ import { NavModule } from '../../menu/nav.module';
 export class DashDetailComponent implements OnInit, OnDestroy {
 	
 	@ViewChild('container', {read: ViewContainerRef}) container: ViewContainerRef;
+	noContentStyle: string = "none";
 	private lecture: LectureItem;
 	private mod: any;
 	private subscription: any;
@@ -43,8 +44,12 @@ export class DashDetailComponent implements OnInit, OnDestroy {
 			let factory = this.mod.componentFactories.find((comp) =>
 		      comp.componentType === targetComponent
 		    );
+		    this.noContentStyle = "none";
 		    this.container.clear();
 		    this.container.createComponent(factory);
+		}else{
+			this.noContentStyle = "block";
+			this.container.clear();
 		}
 	}
 

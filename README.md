@@ -65,11 +65,11 @@ Angular2 Dashboard - Learning By Example
 - Http
  - FireBase Setup
  - CRUD Examples
-  - GET Request
-  - POST Request
-  - PATCH Request
-  - DELETE Request
-  - Error Handling
+    - GET Request
+    - POST Request
+    - PATCH Request
+    - DELETE Request
+    - Error Handling
 - Animation
 
 ## Installation

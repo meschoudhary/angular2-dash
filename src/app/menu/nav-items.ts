@@ -1,53 +1,21 @@
-import { Component } from '@angular/core';
-
-@Component({
-  selector: 'app-home',
-  templateUrl: `
-      <p>Example Component</p>
-  `
-})
-export class ExampleComponent{
-  constructor() { }
-}
-
-
-@Component({
-  selector: 'app-home',
-  templateUrl: `
-      <p>Example Component 2</p>
-  `
-})
-export class ExampleComponent2{
-  constructor() { }
-}
-
-@Component({
-  selector: 'app-home',
-  templateUrl: `
-      <p>Example Component 3</p>
-  `
-})
-export class ExampleComponent3{
-  constructor() { }
-}
-
+import { StringInterpolationComponent } from '../modules';
 
 export const NAV_ITEMS = [
     {
       	name: "Components",
         lectures: [
-            {title: "NgModule", component: ExampleComponent},
-            {title: "Creating a Component", component: ExampleComponent2},
-            {title: "Templates and Styles", component: ExampleComponent3},
-            {title: "View Encapsulation", component: ExampleComponent3},
-            {title: "NgContent", component: ExampleComponent3},
-            {title: "String Interpolation", component: ExampleComponent3},
-            {title: "Property Binding", component: ExampleComponent3},
-            {title: "Event Binding", component: ExampleComponent3},
-            {title: "Two-way Binding", component: ExampleComponent3},
-            {title: "Custom Events", component: ExampleComponent3},
-            {title: "Template Access", component: ExampleComponent3},
-            {title: "Component Lifecycle", component: ExampleComponent3}
+            {title: "NgModule"},
+            {title: "Creating a Component"},
+            {title: "Templates and Styles"},
+            {title: "View Encapsulation"},
+            {title: "NgContent"},
+            {title: "String Interpolation", component: StringInterpolationComponent},
+            {title: "Property Binding"},
+            {title: "Event Binding"},
+            {title: "Two-way Binding"},
+            {title: "Custom Events"},
+            {title: "Template Access"},
+            {title: "Component Lifecycle"}
         ]
     },
   	{
@@ -113,10 +81,37 @@ export const NAV_ITEMS = [
         ]
     },
     {
-        name: "Pipes"
+        name: "Pipes",
+        lectures: [
+            {title: "Basic (built-in) Pipes"},
+            {title: "Pipe Arguments"},
+            {title: "Chaining Pipes"},
+            {title: "Custom Pipes"},
+            {title: "Pure Pipes vs Impure Pipes"},
+            {title: "Async Pipes"}
+        ]
     },
     {
-        name: "Http"
+        name: "Http",
+        children: [
+          {
+              name: "FireBase Setup",
+              lectures: [
+                  {title: "Document Structure"},
+                  {title: "Minimum Setup"}
+              ]
+          },
+          {
+              name: "CRUD Examples",
+              lectures: [
+                  {title: "GET Request"},
+                  {title: "POST Request"},
+                  {title: "PATCH Request"},
+                  {title: "DELETE Request"},
+                  {title: "Error Handling"}
+              ]
+          }
+        ]
     },
     {
         name: "Animation"
