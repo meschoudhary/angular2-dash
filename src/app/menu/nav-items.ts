@@ -1,21 +1,32 @@
-import { StringInterpolationComponent } from '../modules';
+import { StringInterpolationComponent,
+          NgModuleComponent,
+          CreatingComponentComponent,
+          TemplateAccessComponent,
+          TemplatesStylesComponent,
+          ViewEncapsulationComponent,
+          NgContentComponent,
+          PropertyBindingComponent,
+          EventBindingComponent,
+          TwoWayBindingComponent,
+          CustomEventsComponent,
+          ComponentLifecycleComponent} from '../modules';
 
 export const NAV_ITEMS = [
     {
       	name: "Components",
         lectures: [
-            {title: "NgModule"},
-            {title: "Creating a Component"},
-            {title: "Templates and Styles"},
-            {title: "View Encapsulation"},
-            {title: "NgContent"},
+            {title: "NgModule", component: NgModuleComponent},
+            {title: "Creating a Component", component: CreatingComponentComponent},
+            {title: "Templates and Styles", component: TemplatesStylesComponent},
+            {title: "View Encapsulation", component: ViewEncapsulationComponent},
+            {title: "NgContent", component: NgContentComponent},
             {title: "String Interpolation", component: StringInterpolationComponent},
-            {title: "Property Binding"},
-            {title: "Event Binding"},
-            {title: "Two-way Binding"},
-            {title: "Custom Events"},
-            {title: "Template Access"},
-            {title: "Component Lifecycle"}
+            {title: "Property Binding", component: PropertyBindingComponent},
+            {title: "Event Binding", component: EventBindingComponent},
+            {title: "Two-way Binding", component: TwoWayBindingComponent},
+            {title: "Custom Events", component: CustomEventsComponent},
+            {title: "Template Access", component: TemplateAccessComponent},
+            {title: "Component Lifecycle", component: ComponentLifecycleComponent}
         ]
     },
   	{
