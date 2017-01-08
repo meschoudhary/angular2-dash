@@ -1,7 +1,7 @@
 # angular2-dash
 Angular2 Dashboard - Learning By Example
 
-<img src="ng2-dash-screenshot.png" width="500px" height="500px"/>
+<img src="ng2-dash-screenshot.png" width="1143px" height="400px"/>
 
 ## Structure
 
