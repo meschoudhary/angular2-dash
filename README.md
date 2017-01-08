@@ -1,7 +1,7 @@
 # angular2-dash
 Angular2 Dashboard - Learning By Example
 
-## Structure (todo)
+## Structure
 
 - Components
  - NgModule
@@ -120,7 +120,11 @@ Then, in `./src/app/menu/nav.module.ts`, import the new module from `../modules`
 
 Last step is to add the new menu item and any lectures in the `nav-items.ts` by following the structure in that file. This shows the new menu item on the dashboard. 
 
-*Note*: In order to have sub-menu items, take a look at './src/app/modules/forms' structure and do the same.
+**Note**: In order to have sub-menu items, take a look at './src/app/modules/forms' structure and do the same.
+
+##Contributors
+
+- [Mohamad Atieh](https://github.com/MohamadAtieh)
 
 ## License
 
