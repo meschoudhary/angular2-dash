@@ -9,7 +9,11 @@ import { StringInterpolationComponent,
           EventBindingComponent,
           TwoWayBindingComponent,
           CustomEventsComponent,
-          ComponentLifecycleComponent} from '../modules';
+          ComponentLifecycleComponent,
+          AttributeDirectivesComponent,
+          StructuralDirectivesComponent,
+          ElementInteractionComponent,
+          DirectivePropertyBindingComponent} from '../modules';
 
 export const NAV_ITEMS = [
     {
@@ -32,10 +36,10 @@ export const NAV_ITEMS = [
   	{
         name: "Directives",
         lectures: [
-            {title: "Attribute Directives"},
-            {title: "Structural Directives"},
-            {title: "Element Interaction (HostListener & HostBinding)"},
-            {title: "Directive Property Binding"}
+            {title: "Attribute Directives", component: AttributeDirectivesComponent},
+            {title: "Structural Directives", component: StructuralDirectivesComponent},
+            {title: "Element Interaction (HostListener & HostBinding)", component: ElementInteractionComponent},
+            {title: "Directive Property Binding", component: DirectivePropertyBindingComponent}
         ]
     },
     {
@@ -125,6 +129,16 @@ export const NAV_ITEMS = [
         ]
     },
     {
-        name: "Animation"
+        name: "Animation",
+        lectures: [
+          {title: "Triggers and States"},
+          {title: "State Transitions"},
+          {title: "State Transitions - Advanced"},
+          {title: "Transition Phases"},
+          {title: "Void (Any) State"},
+          {title: "Animation Keyframes"},
+          {title: "Grouping Animations"},
+          {title: "Animation Callbacks"}
+      ]
     }
 ];

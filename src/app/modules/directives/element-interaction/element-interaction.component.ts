@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-element-interaction',
-  templateUrl: './element-interaction.component.html',
-  styleUrls: ['./element-interaction.component.css']
+  templateUrl: './element-interaction.component.html'
 })
 export class ElementInteractionComponent implements OnInit {
 

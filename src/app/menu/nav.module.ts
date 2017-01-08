@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ComponentsModule } from '../modules';
+import { ComponentsModule, DirectivesModule, ServicesModule, PipesModule, HttpModule, FormsModule } from '../modules';
 
 @NgModule({
   imports: [
-    CommonModule, ComponentsModule
+    CommonModule, ComponentsModule, DirectivesModule, ServicesModule, PipesModule, HttpModule, FormsModule
   ],
   declarations: []
 })
